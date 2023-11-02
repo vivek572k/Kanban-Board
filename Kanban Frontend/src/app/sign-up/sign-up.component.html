@@ -1,0 +1,65 @@
+<div class="signup">
+
+    <form [formGroup]="signupform" >
+    <mat-card class="example-card">
+    
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title class="title" style="padding-left: 130px;font-size: xx-large;text-decoration:underline;">Create your account</mat-card-title>
+        </mat-card-header>
+    
+        <mat-card-content class="fields">
+            <h4> Email Id</h4>
+            <mat-form-field class="form" appearance="outline" >
+                <input matInput  type="text" required  formControlName="emailId" class="form-control" >
+    
+                <mat-error *ngIf="emailId?.errors?.['required']">
+                    Email id is required.
+                </mat-error>
+    
+                <mat-error *ngIf="emailId?.errors?.['email']">
+                    Enter valid email id.
+                </mat-error>
+    
+            </mat-form-field>
+    
+            <h4>Password</h4>
+            <mat-form-field class="form" appearance="outline"  >
+                <input matInput  type="password" required formControlName="password" class="form-control">
+    
+                <mat-error *ngIf="password?.errors?.['required']">
+                    Password is required.
+                </mat-error>
+    
+                <mat-error *ngIf="password?.errors?.['pattern']">
+                    Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                    and a number.
+                </mat-error>
+    
+            </mat-form-field>
+            <h4>Username</h4>
+            <mat-form-field class="form" appearance="outline" >
+                <input matInput  type="text" required formControlName="userName" class="form-control">
+    
+                <mat-error *ngIf="userName?.errors?.['required']">
+                    UserName is required.
+                </mat-error>
+    
+                <mat-error *ngIf="userName?.errors?.['minlength']">
+                    UserName should have minimum of 2 characters.
+                </mat-error>
+    
+                <mat-error *ngIf="userName?.errors?.['pattern']">
+                    UserName is must be alphabet.
+                </mat-error> 
+            </mat-form-field> 
+    
+        </mat-card-content>
+        <button mat-flat-button color="primary"  style="width: 20rem;margin-left: 120px;" (click)="onsubmit()" [disabled]="signupform.invalid" type="submit">Create</button>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    </div>
+    
+    

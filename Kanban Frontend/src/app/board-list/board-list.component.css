@@ -1,0 +1,18 @@
+.list{
+    width: 50%;
+    margin: 20px 0px 20px 50px;
+   margin-left: 150px;
+   
+
+ }
+ .boardName{
+    font-size: x-large;
+    text-transform: capitalize;
+ }
+ .card{
+    margin: 0px 0p 10px 10px;
+    padding: 25px;
+    box-shadow: 1px 2px 2px 1px;
+    background-color: rgba(149, 200, 217, 0.239);
+    border-radius: 10px;
+ }

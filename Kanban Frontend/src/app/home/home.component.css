@@ -1,0 +1,147 @@
+/* h2{
+    padding-left: 55em;
+    padding-top: 50px;
+}
+.example-card {
+    max-width: 300px;
+    margin-bottom: 8px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    margin-right:13em ;
+    margin-top: 20px;
+    background-color:rgba(157, 194, 226, 0.427);
+    float: right;
+  }
+  .para{
+    color: grey;
+    padding-left: 78.5em;
+    float: right;
+    /* margin-right: 21.5em;
+    margin-top: -83.5em; */
+
+  /* }
+  a{
+    text-decoration: none;
+  }
+  .card{
+    width: 70em;
+    margin-left: 20em;
+    margin-top: 30px;
+    padding-top: 25px;
+    height: 70px;
+    background-color: rgba(206, 226, 226, 0.766);
+        
+  }
+  .button{
+    float:right;
+    margin-top: -20px;
+    
+  }
+.card:hover{
+    transform: scale(1.05); */
+    /* transform: scale3d(0.5); */
+/* }
+h1{
+  margin-left:40em;
+ padding-left: 40em;
+  font-size: xx-large;
+  width: 20px; */
+  
+  /* font-weight: 10000; */
+  /* text-decoration:underline ; */
+/* } */
+/* #span{
+  color: blue;
+  float: right; */
+  /* margin-right: 20em;
+  margin-top: -60em; */
+ 
+/* }
+span.boardName{
+  font-size: x-large;
+  font-weight: 500;
+  padding-left: 10px;
+
+  text-transform:capitalize; 
+}
+.newboard{
+  
+  padding-left: 40px;
+} */ 
+/* .boardname{
+    padding: 12px 0px 12px 20px;
+    margin: auto;
+    font-size: 16px;
+    height: fit-content;
+  }
+  .boardContainer{
+    display: flex;
+    /* height: fit-content; */
+  /* } */
+  /* .titleContainer{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 400;
+  }
+  .sidenav-container{
+    display: flex;
+    height: 88vh;
+  }
+  .sidenav{
+    width: 250px;
+    background-color: bisque;
+    color: black;
+  
+  }
+  .header-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0px;
+    
+  
+  }
+  .header-title{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  mat-menu{
+    background-color: blue;
+    color: brown;
+  }
+  mat-menu-item{
+    transition: background-color 0.2s;
+  }
+  mat-sidenav-content{
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgb(229, 224, 216);
+    color: black;
+  }
+  .boardButton{
+    display: flex;
+    gap: 30px;
+  }
+  .board-name{
+    display: flex;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin:0px 5px 5px 10px;
+  } */
+  .card-container{
+    width: 20%;
+    box-shadow: 1px 1px 3px 1px rgba(167, 231, 228, 0.802);
+    float: right;
+    margin-right: 15em;
+    margin-top: 30px;
+  } 
+
+.example-card{
+  background-color: rgba(124, 195, 193, 0.232);
+  border-radius: 10px;
+}
+.refresh{
+  margin-left: 55%;
+  margin-top: 15px;
+  height: 20px;
+}

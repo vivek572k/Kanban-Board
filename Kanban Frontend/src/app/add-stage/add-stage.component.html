@@ -1,0 +1,16 @@
+<div class="addstage">
+<mat-card class="example-card">
+    <h1>What is the workflow of this board?</h1>
+<form [formGroup]="stageForm" >
+<mat-form-field appearance="outline" class="form">
+    <input matInput type="text" placeholder="Enter the Stage Name"  formControlName="stageName" class="form-control">
+    <mat-error *ngIf="stageName?.errors?.['required']">
+        Stage Name  is required.
+    </mat-error>
+</mat-form-field>
+<h4>Think about the process that you want to visualize on your board.</h4>
+<button mat-flat-button type="button" color="accent" (click)="addStage()" mat-dialog-close>Add Stage</button>
+<button mat-flat-button color="primary" type="submit" routerLink="" (click)="saveStage()" mat-dialog-close>Create</button>
+</form>
+</mat-card>
+</div>

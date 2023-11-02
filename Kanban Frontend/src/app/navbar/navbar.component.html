@@ -1,0 +1,117 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'navigation'" [mode]="'side'" [opened]="false">
+    <mat-toolbar class="header" >Kanban Board</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <div class="refresh">
+        <button mat-icon-button (click)="getAllBoard()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+      <div class="header-container">
+        <span class="header-title">Create Board</span>
+        <button mat-icon-button routerLink="/addboard"> 
+          <mat-icon>add_circle</mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+
+      <div class="partition partition1">
+        <h3 class="titleContainer">Board</h3>
+        <mat-list-item matListItemTitle *ngFor="let board of boards"> <!--*ngFor="let board of boards"-->
+          <!-- <div matListItemTitle *ngFor="let board of boards"> -->
+          <div class="boardContainer">
+            <p class="boardname" routerLink="/boardview/{{board.boardName}}" (click)="gotoboard(board)">{{board.boardName}}</p><!--(click)="gotoboard(board)"-->
+            <button mat-icon-button class="boardButton" aria-label="Example icon-button with a menu"
+              [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <mat-nav-list>
+                <mat-list-item matListItemTitle (click)="deleteBoard(board.boardName)"> <!--*ngFor="let member of members"-->
+                  <!-- <div matListItemTitle *ngFor="let board of boards"> -->
+                  <div class="member-container">
+                    <mat-icon color="warn">delete</mat-icon>
+                    <p>Delete Board</p>
+                  </div>
+                </mat-list-item>
+              </mat-nav-list>
+             
+            </mat-menu>
+          </div>
+          
+          <!-- <mat-menu #Boardmenu="matMenu" xPosition="after">
+    <ng-container *ngFor="let board of boards">
+      <div class="board-name">
+        <button mat-menu-item class="board-Button" (click)="gotoboard(board)">
+          {{board.boardName}}
+        </button>
+      
+    </ng-container>
+  </mat-menu> -->
+    <!-- </div> -->
+        </mat-list-item>
+      </div>   
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <div class="header-container">
+      <span class="header-title">Add Member</span>
+      <button mat-icon-button routerLink="/member"> <!--(click)="addMemberDialog()"-->
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="partition partition2">
+      <div class="member-container">
+      <h3 class="title-Container">Member List</h3>
+
+      <button mat-icon-button class="boardButton" aria-label="Example icon-button with a menu"
+              [matMenuTriggerFor]="menu">
+              <mat-icon>list</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <mat-nav-list>
+                <mat-list-item matListItemTitle *ngFor="let member of members"> <!--*ngFor="let member of members"-->
+                  <!-- <div matListItemTitle *ngFor="let board of boards"> -->
+                  <div class="member-container">
+                    <mat-icon>person</mat-icon>
+                    <p>{{member.member}}</p>
+                  </div>
+                </mat-list-item>
+              </mat-nav-list>
+            </mat-menu>  
+            
+          </div>
+     
+    </div>
+    
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar  class="header" >
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" [disabled]="!isLogin()"><!--[disabled]="!isLogin()"-->
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon><!--*ngIf="isLogin()"--> 
+      </button>
+      <div>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+          routerLink="/home">
+          <mat-icon>home</mat-icon>
+        </button>
+        <span>KαɳႦαɳ Tσσʅ</span>
+        <span class="example-spacer"></span>
+
+
+        <button mat-raised-button class="example-icon" (click)="validateLogoutStatus()" *ngIf="isLogin()" >
+          Logout
+        </button>
+        <button mat-raised-button class="Registerbtn" routerLink="/signUp" *ngIf="!isLogin()" >
+          Register
+        </button>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <!-- <app-home></app-home> -->
+    <!-- <router-outlet></router-outlet> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

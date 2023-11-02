@@ -1,0 +1,72 @@
+<!-- <h1>KαɳႦαɳ Tσσʅ</h1> -->
+<!-- <div class="title">
+    <p>Create a user-friendly Kanban board tool with customizable</p>
+    <p>columns for efficient task tracking and</p>
+    <p>team coordination.</p>
+</div> -->
+<!-- <div> -->
+    <!-- <div class="head ">
+        <h1 class="head-title">KαɳႦαɳ Tσσʅ</h1> -->
+        <!-- <img class="title" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAQCAMAAADXjyqxAAAAh1BMVEUAAAAkeb4keb4ne78keb4ler4sfcEkeb4keb4keb4mer8ieL4keb4keb4ler8ler8ker8keb4me78keb4jeb4jeb4mer8keb4keb4keb4keb4oe78keb4leb8keb4keb4ker8qfcAsfsEner8keb4me78mer4jeb4ker8keb4jeb4ler8keb6Y85i+AAAALHRSTlMA8eUU+x0KzOHcEHvs6IthMMAZ99dzS7ks0ZoHOw7HqlU2BbCCKCO0lKJoQSI0+ZcAAAJNSURBVDjLzZPZeqMwDIVtlgSnZnFwwpawpIRs5/2fb2Sb0M7Xpr2bb3yBhZH1S0eCCc1+XHcvZb+to2r911/XYAh+DvCG3a+QTSS3/wAS/zeQcggZ889Zdl6Z11V4LksyHWRbZpPzJyubTrYNxmNqFrmy0B6HWRbSNpvTX5AUkjpXA8irkC61MiDT21uIJwHeWmJrPNSRaJX1ENkMAecDY03BAV5Y9LsxyXWBHAJb7lty31WoqCQv78akDfjWQHI1JhGEoVzHdPRwpTR5fhuTCvHGQfLicmaNgKdUDNGwlSaz8BD7M4QYmBYFY4QE8UwKCqmBjEYdjX528AEDESTPSePhICYYu6Am5uaGgl2hfLrVoZshYc7LOcCpIc0eBuJbEeul8SmKp4fAiSC2sgRvS+PpLDrahoq2h3QBPWwcJMbMOFy0qCLsn5AH3hfIFpyevdK65Vg9ISmSD0iGm4szZHE+OPOO1EEiXGyregSi0vkH5PAJcgRM4rmudPACciBh3epwna09dg7SaCcFcCDY7XtIhohN4CF56BeQ0oUxV9rh7swE++d0CVOoj8gc199Dakqud3pUXyArwc3ge/xs/znOjxFKJzKWEd5KisxgZ+z6BXI30YL8TKny7yGssvsOcU+qS7rRQ6YklofUQWClg0+lQXUXaSDxZ0iwVhLBaGcaRVd87QntwGDKtSthi9kxC1mvrYxVzU69kjxS9cQ2RbExfdAJPeq1zKM6s7Ls1lKK4npiW/XemOT0bm5wywc7n5x3gxuxLpaXB7OQP7SFRWrkBmAcAAAAAElFTkSuQmCC"> -->
+    <!-- </div> -->
+    <div class="btn ">
+        <!-- <button type="button" class="d-inline btn btn-outline-primary  me-3 " style="margin-left: 60%;">Primary</button> -->
+        <!-- <button type="button" class="d-inline btn btn-outline-primary  me-3 ">Primary</button> -->
+        <!-- <button type="button" class="d-inline btn btn-outline-primary mx-5 ">Primary</button> -->
+        <!-- <button type="button" class="d-inline btn btn-outline-primary mx-5">Primary</button> -->
+        <!-- <button type="button" class="d-inline btn btn-outline-primary mx-5 ">Primary</button> -->
+        <button mat-button color="accent" class="home-btn">Home</button>
+        <button mat-button color="accent" class="home-btn" routerLink="">About</button>
+        <button mat-button color="accent" class="home-btn" routerLink="/signUp">SignUp</button>
+        <!-- <button mat-button color="accent" class="home-btn">Login</button> -->
+    </div>
+<!-- </div> -->
+<!-- <hr> -->
+<div class="img-log">
+    <img src="../../assets/attachment.png">
+</div>
+<div class="field">
+    <form [formGroup]="loginForm">
+       
+        <div class="logtitle">
+            <h2>! Welcome Back Chief</h2>
+        </div>
+      
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Enter the Email Id</mat-label>
+            <input matInput type="text" required formControlName="emailId">
+            <div class="login-icon"><mat-icon>email</mat-icon></div>
+            <mat-error *ngIf="emailId?.errors?.['required']">
+                Email id is required.
+            </mat-error>
+
+            <mat-error *ngIf="emailId?.errors?.['pattern']">
+                Email should be in format example@gmail.com
+            </mat-error>
+        </mat-form-field>
+      
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Enter the Password</mat-label>
+            <input matInput type="password" required formControlName="password">
+            <div class="login-icon"><mat-icon>lock</mat-icon></div>
+
+            <mat-error *ngIf="password?.errors?.['required']">
+                password is required.
+            </mat-error>
+
+            <mat-error *ngIf="password?.errors?.['pattern']">
+                Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                and a number.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- </mat-card-content> -->
+        <button mat-flat-button color="primary" (click)="validateUserLogin()" class="login">Login</button>
+        <br>
+        <hr>
+        <span class="sign-up">To Create New Account.Click here</span>
+        <button mat-button color="primary" (click)="navigateToSingUp()" class="signup">SignUp</button>
+
+        <!-- </mat-card> -->
+    </form>
+</div>

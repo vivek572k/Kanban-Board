@@ -1,0 +1,43 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+    .dashboard{
+      margin-left: 20em;
+      font-size: large;
+    }
+   
+    .example-container {
+      width: 800px;
+      height: 200px;
+      margin: 10px;
+      border: 1px solid #555;
+    }
+    h1{
+    margin-left: 40em;
+    }
+    span{
+      font-size: 50px;
+      text-decoration: underline;
+      padding-left: 14em;
+    }
+    .side{
+      border: 1px solid rgba(233, 213, 199, 0.797); ;
+    
+      width: 15%;
+      height: 100%;
+      background-color: rgba(197, 227, 237, 0.797); 
+    }
+    h5{
+      margin-left: 10px;
+    }
+    .list,h5{
+      font-size: x-large;
+      margin-top: 10px;
+      
+      font-weight: 400;
+    }
+    .header{
+      background-color:rgb(232, 202, 154) ;
+  
+    }
+  

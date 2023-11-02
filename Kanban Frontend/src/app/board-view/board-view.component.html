@@ -1,0 +1,60 @@
+<div class="add-stage">
+    <button mat-raised-button class="stageAdd" routerLink="/additionalstage/{{boards.boardName}}"
+        matTooltip="Click here to add more stage">Add Stage</button>
+</div>
+<h2>Stage Details : {{boards.boardName}}</h2>
+<div class="tab" cdkDropListGroup>
+    <div *ngFor="let stage of boards.stages" class="stage">
+        <div cdkDropList [cdkDropListData]="stage.taskList" (cdkDropListDropped)="onTaskDropped($event)">
+            <div class="stageName">
+                <span>{{stage.stageName}}</span>
+                <button mat-icon-button class="stgaeDel" (click)="deleteStages(stage.stageName)"
+                matTooltip="Click here to delete the stage"><mat-icon>delete</mat-icon></button>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="task" cdkDrag [cdkDragData]="task" *ngFor="let task of stage.taskList" routerLink="/taskview/{{boards.boardName}}/{{stage.stageName}}/{{task.taskTitle}}">
+
+                <div class="taskCard">
+                    <span class="taskName">{{task.taskTitle}}</span>
+                    <br>
+                    <span class="assignee">Assigned to: {{task.assignee}}</span>
+                    
+                </div>
+                
+            </div>
+            <mat-divider></mat-divider>
+            <button mat-icon-button class="taskadd"
+            routerLink="/addtask/{{boards.boardName}}/{{stage.stageName}}"
+            matTooltip="Click here to add the task to the stage"><mat-icon>add_circle_outline</mat-icon>
+        </button>
+        </div>
+    </div>
+    <!-- <mat-card class="example-card" cdkDropList  (cdkDropListDropped)="onTaskDropped($event)"  *ngFor="let stage of boards.stages"> -->
+    <!-- <mat-card class="example-card" cdkDropList>
+        <mat-card-header>
+            <mat-card-title class="stagename">{{stage.stageName}}</mat-card-title>
+            <div class="deletestage">
+                <button mat-icon-button class="stgaeDel" (click)="deleteStages(stage.stageName)"
+                    matTooltip="Click here to delete the stage"><mat-icon>delete</mat-icon></button>
+            </div>
+
+        </mat-card-header>
+
+        <hr>
+        <mat-card-content>
+            <mat-card *ngFor="let task of stage.taskList" class="task-card"
+                routerLink="/taskview/{{boards.boardName}}/{{stage.stageName}}/{{task.taskTitle}}">
+                <mat-card-header>
+                    <mat-card-title class="taskname">{{task.taskTitle}}</mat-card-title>
+                    <mat-card-subtitle>Assigned to: {{task.assignee}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <hr>
+            <button mat-icon-button class="taskadd" routerLink="/addtask/{{boards.boardName}}/{{stage.stageName}}"
+                matTooltip="Click here to add the task to the stage"><mat-icon>add_circle_outline</mat-icon>
+            </button>
+        </mat-card-content>
+
+    </mat-card> -->
+
+</div>

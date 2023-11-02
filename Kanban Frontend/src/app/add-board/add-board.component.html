@@ -1,0 +1,19 @@
+<div class="addboard">
+    <mat-card class="example-card">
+        <h1>Start by giving a name to your new board</h1>
+        <form [formGroup]="boardForm">
+            <mat-form-field appearance="outline" class="form">
+                <input matInput type="text" required placeholder="Enter the Board name" formControlName="boardName"
+                    class="form-control">
+
+                    <mat-error *ngIf="boardName?.errors?.['required']">
+                        Board Name  is required.
+                    </mat-error>
+            </mat-form-field><br>
+            <h4>What process or project do you want to organize on this board? A good name should be short and reflect
+                the
+                purpose of the board.</h4>
+            <button mat-flat-button color="primary" type="submit" (click)="saveBoard()" mat-dialog-close>Next</button>
+        </form>
+    </mat-card>
+</div>

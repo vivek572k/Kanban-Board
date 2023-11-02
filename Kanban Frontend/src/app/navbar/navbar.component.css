@@ -1,0 +1,151 @@
+.sidenav-container {
+  height: 100%;
+  
+}
+
+.sidenav {
+  width: 20%;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  width: 100%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.side-title{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+  .dashboard{
+    margin-left: 20em;
+    font-size: large;
+  }
+ 
+  .example-container {
+    width: 800px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+  h1{
+  margin-left: 40em;
+  }
+  span{
+    font-size: 50px;
+    text-decoration: underline;
+    padding-left: 14em;
+  }
+  .side{
+    border: 1px solid rgba(233, 213, 199, 0.797); ;
+  
+    width: 15%;
+    height: 100%;
+    background-color: rgba(197, 227, 237, 0.797); 
+  }
+  h5{
+    margin-left: 10px;
+  }
+  .list,h5{
+    font-size: x-large;
+    margin-top: 10px;
+    
+    font-weight: 400;
+  }
+  .header{
+    background-color:rgb(119, 210, 210) ;
+    
+  }
+  .header-title{
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    /* margin-right: 15em; */
+    
+  }
+  .boardname{
+    padding: 12px 0px 12px 20px;
+    margin: auto;
+    font-size: 16px;
+    color: black;
+    height: fit-content;
+  }
+  .boardContainer{
+    display: flex;
+    /* height: fit-content; */
+  }
+  .titleContainer{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    
+  }
+  .sidenav-container{
+    display: flex;
+    /* height: 88vh; */
+  }
+  .sidenav{
+    width: 250px;
+    background-color:rgba(159, 211, 211, 0.216) ;
+    color: black;
+  
+  }
+  .header-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: -160px;
+    padding: 15px 0px;
+  }
+  mat-menu{
+    background-color: blue;
+    color: brown;
+  }
+  mat-menu-item{
+    transition: background-color 0.2s;
+  }
+  
+  .boardButton{
+    display: flex;
+    gap: 30px;
+  }
+  .board-name{
+    display: flex;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin:0px 5px 5px 10px;
+  }
+.mat-sidenav-content{
+  /* background-image: url(../../assets/bg-img.jpg); */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
+  background-color: white;
+}
+.member-container{
+  display:flex;
+}
+.title-Container{
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+/* .example-icon{
+  background-color: ;
+} */
+.refresh{
+  margin-left: 80%;
+}
+.Registerbtn{
+  margin-left: -20px;
+}

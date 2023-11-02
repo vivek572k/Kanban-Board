@@ -1,0 +1,32 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="card-container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title routerLink="/addboard" class="newboard">Create New Board</mat-card-title>
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-card-subtitle> {{longText}}</mat-card-subtitle>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div>
+  <div class="refresh">
+    <button mat-icon-button (click)="getAllBoard()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+  <app-board-list *ngFor="let board of boards" [boards]="board" class="board-list"></app-board-list>
+
+
+
+
+
+        <!-- <app-stage-view *ngIf="selectedBoard" [selectedBoard]="selectedBoard"></app-stage-view> -->
+    <!-- </mat-sidenav-content> -->
+    <!-- <span class="boardName" routerLink="/stageView/{{board.boardName}}">{{board.boardName}}</span>
+        </mat-list> -->

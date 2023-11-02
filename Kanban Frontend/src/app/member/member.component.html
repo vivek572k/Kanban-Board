@@ -1,0 +1,28 @@
+<div class="member">
+    <mat-card class="example-card">
+        <h1>Enter the name of members here</h1>
+        <form [formGroup]="memberForm">
+            <mat-form-field appearance="outline" class="form">
+                <input matInput type="text" required placeholder="Enter the Member id" formControlName="id"
+                    class="form-control">
+                    <mat-error *ngIf="id?.errors?.['required']">
+                        id is required.
+                    </mat-error>
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="form">
+                <input matInput type="text" required placeholder="Enter the Member name" formControlName="member"
+                    class="form-control">
+
+                    <mat-error *ngIf="member?.errors?.['required']">
+                        Email is required.
+                    </mat-error>
+                    <mat-error *ngIf="member?.errors?.['pattern']">
+                        Member Email should be in format example@gmail.com
+                    </mat-error>
+            </mat-form-field><br>
+            <h4>A good set of people always make the work and workplace better</h4>
+            <!-- <button mat-flat-button color="accent" type="submit" mat-dialog-close (click)="addMember()">Add</button> -->
+            <button mat-flat-button color="primary" type="submit" mat-dialog-close (click)="saveMember()">Save</button>
+        </form>
+    </mat-card>
+</div>

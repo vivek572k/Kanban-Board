@@ -1,0 +1,76 @@
+<div class="addtask">
+    <mat-card class="example-card">
+        <form [formGroup]="taskForm" (ngSubmit)="saveTask()">
+
+            <mat-form-field appearance="outline" class="form1">
+                <mat-label>Task Title</mat-label>
+                <input matInput type="text" placeholder=" Task Title" required formControlName="taskTitle" />
+
+                <mat-error *ngIf="taskTitle?.errors?.['required']">
+                    Task Title is required.
+                </mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field appearance="outline" class="form1">
+                <mat-label>Description</mat-label>
+                <textarea matInput required formControlName="description"></textarea>
+
+                <mat-error *ngIf="description?.errors?.['required']">
+                    description is required.
+                </mat-error>
+            </mat-form-field>><br>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Asignee</mat-label>
+                <mat-select required formControlName="assignee">
+                    <!-- we need to get the list of member here -->
+                    <mat-option *ngFor="let member1 of teamMember "
+                        value="{{member1.member}}">{{member1.member}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="assignee?.errors?.['required']">
+                    Assignee is required.
+                </mat-error>
+
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option matOption *ngFor="let stagename of stageList"
+                        value="{{stagename.stageName}}">{{stagename.stageName}}</mat-option>
+
+                </mat-select>
+                <mat-error *ngIf="status?.errors?.['required']">
+                    Status is required.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Date</mat-label>
+                <input matInput [min]="date" [matDatepicker]="picker" required formControlName="deadline">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="deadline?.errors?.['required']">
+                    Deadline is required.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Priority</mat-label>
+                <mat-select required formControlName="priority">
+                    <!-- we need to get the list of member here -->
+                    <mat-option value="High">High</mat-option>
+                    <mat-option value="Medium">Medium</mat-option>
+                    <mat-option value="Low">Low</mat-option>
+                </mat-select>
+
+                <mat-error *ngIf="priority?.errors?.['required']">
+                    Priority is required.
+                </mat-error>
+            </mat-form-field>
+            <button mat-flat-button color="primary" type="submit" mat-dialog-close>Create</button>
+        </form>
+    </mat-card>
+</div>

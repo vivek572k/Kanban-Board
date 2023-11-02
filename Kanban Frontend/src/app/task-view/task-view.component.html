@@ -1,0 +1,57 @@
+<div class="addtask">
+<mat-card class="example-card">
+    <form (ngSubmit)="updateTask()" #taskForm="ngForm">
+    
+        <mat-form-field appearance="outline" class="form1">
+        <input matInput type="text" placeholder=" Task Title" required [(ngModel)]="taskDetails.taskTitle" name="taskTitle" #taskTitle="ngModel" />
+    </mat-form-field><br>
+    
+    <mat-form-field appearance="outline" class="form1">
+        <mat-label>Description</mat-label>
+        <textarea matInput required [(ngModel)]="taskDetails.description" name="description" #description="ngModel"></textarea>
+    </mat-form-field>><br>
+    
+  
+    
+    <mat-form-field appearance="outline" class="form">
+        <mat-label>Asignee</mat-label>
+        <mat-select required [(ngModel)]="taskDetails.assignee" name="assignee" #assignee="ngModel">
+            <!-- we need to get the list of member here -->
+            <mat-option *ngFor="let member1 of teamMember " value="{{member1.member}}">{{member1.member}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    
+    <mat-form-field appearance="outline" class="form">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="taskDetails.status" name="status" #status="ngModel">
+            <mat-option matOption *ngFor="let stagename of stageNames" value="{{stagename.stageName}}">{{stagename.stageName}}</mat-option>
+         
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="form">
+        <mat-label>Date</mat-label>
+        <input matInput [min]="date" [matDatepicker]="picker" required [(ngModel)]="taskDetails.deadline" name="deadline" #deadline="ngModel">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    
+        <mat-form-field appearance="outline" class="form">
+            <mat-label>Priority</mat-label>
+            <mat-select required [(ngModel)] ="taskDetails.priority"  name="priority" #priority="ngModel">
+                <!-- we need to get the list of member here -->
+                <mat-option value="High">High</mat-option>
+                <mat-option value="Medium">Medium</mat-option>
+                <mat-option value="Low">Low</mat-option>
+            </mat-select>
+        </mat-form-field>
+   <br>
+    
+      <button mat-flat-button color="primary" type="submit"  mat-dialog-close>Update</button>
+      <button mat-flat-button color="primary" type="submit"  mat-dialog-close (click)="deletetask()">Delete</button>
+    </form>
+    </mat-card>
+</div>

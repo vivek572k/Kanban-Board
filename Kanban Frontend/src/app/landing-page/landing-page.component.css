@@ -1,0 +1,122 @@
+/* .img {
+    width: 60%;
+    float: right;
+}
+.title{
+    font-size: xxx-large;
+    color: rgb(46, 140, 222);
+    font-weight:800;
+}
+.head{
+    margin-left: 1%;
+    padding: 20px;
+    position: relative;
+    margin-bottom: -4.5%;
+}
+button{
+    position: relative;
+    overflow: hidden;
+    margin: 0px 60px 0px 0px;
+    font-size: x-large;
+    display: inline;   
+}
+ */
+/* button::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: aqua;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+button:hover::after{
+    transform: scale(1);
+} */
+/* 
+
+
+.more-btn{
+    position: absolute;
+    margin-top: 400px;
+    background-color: rgb(71, 184, 212);
+    border-radius: 20px;
+    width: 10%;
+    display: inline;
+    margin-left: 90px;
+}
+ */
+ .header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: aliceblue;
+
+}
+.content{
+    font-size: xx-large;
+    font-weight: 700;
+    color: brown;
+    text-decoration: underline solid sandybrown;
+}
+p{
+    font-size: x-large;
+   
+}
+.para{
+    font-size: x-large;   
+    margin-top: 30px;
+    line-height: 130%;
+}
+button{
+    position: relative;
+    justify-content: end;
+    margin: 2% 60px 0px 0px;
+    font-size: x-large;
+    display: inline;   
+}
+.head{
+    margin-left: 1%;
+    color: rgb(20, 150, 220)
+}
+.title{
+    font-size: xxx-large;
+    font-weight: 700;
+    margin-top: 2%;
+    font-family: serif;
+}
+.more-btn{
+    position: absolute;
+
+    background-color: rgb(71, 184, 212);
+    border-radius: 20px;
+    width: 10%;
+    display: inline;
+    
+}
+.about{
+    text-decoration: underline solid sandybrown;
+    font-size: xx-large;
+    font-weight: 500;
+    color:  crimson;
+}
+/* #about{
+    background-color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+
+} */
+.icon1{
+    width: 7%;
+}
+.btn{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.para1{
+    font-size: x-large;   
+    margin-top: 30px;
+    line-height: 130%;
+}
+.space{
+    margin-top: 50px;
+}

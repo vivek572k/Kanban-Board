@@ -1,0 +1,127 @@
+/* .example-card {
+    width: 26%;
+    height: 550px;
+    margin-left: 75em;
+    margin-top: 12em;  
+    background-color:rgba(239, 255, 255, 0.204);
+    box-shadow: 2px 2px 3px 3px rgb(167, 232, 228);  
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/images.png');
+    background-size:cover;
+    margin-left: 60px;
+    margin-right: -110px;
+  } */
+  /* h4{
+    padding-top: 30px;
+    margin-left: 50px;
+    font-weight: 600;
+  } */
+  /* h1{
+    font-size: xxx-large;
+    color: rgb(46, 140, 222);
+    font-weight:800;
+    padding-top: 15px;
+    font-size:50px;
+  } */
+  .login{
+    
+    margin-top: 40px;
+    margin-left: 9%;
+    width: 75%;
+    /* height: 45px; */
+    font-size: 20px;
+  }
+  .signup{
+    margin-left: 17em;
+    display: flex;
+    font-size: 20px;
+    margin-top: -33px;
+    text-decoration: underline;
+    
+  }
+
+.form{
+  width: 75%;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.title{
+  float: left;
+}
+p{
+  font-size: x-large;
+  color:rgb(117, 116, 116);
+  
+  margin-left: 300px;
+}
+img{
+  width: 80%;
+  margin-top: 10em;
+  margin-left: -46em;
+  margin-right: 20px;
+}
+.icon{
+  /* width:24px; */
+  height: 100px; 
+}
+.login-icon{
+  margin-top: -22px;
+  margin-left: 25em;
+}
+.logtitle{
+  margin-left: 9em;
+  /* margin-top: 10px; */
+  margin-bottom: 40px;
+}
+h2{
+  font-size: xx-large;
+  font-weight: 500;
+}
+.sign-up{
+  font-size: large;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+.img-log{
+  /* width: 30%; */
+
+  margin: -120px 0px 0px 700px;
+}
+.field{
+  float: right;
+  display: flex;
+  margin: -650px 50px 0px 0px ;
+  width: 40%;
+}
+.head-title{
+  /* width: 20%; */
+  
+  font-size: xxx-large;
+  color: rgb(46, 140, 222);
+  font-weight:800;
+}
+.head{
+  margin-left: -35%;
+  
+  padding: 20px;
+  position: relative;
+  margin-bottom: -3%;
+}
+.btn{
+  position: relative;
+  /* overflow: hidden;
+  padding: 10px;
+  color: darkgray; */
+  
+  margin-left: 40%;
+  
+}
+.home-btn{
+  position: relative;
+  overflow: hidden;
+  margin: 0px 60px 0px 10px;
+  font-size: x-large;
+  display: inline; 
+}

@@ -1,0 +1,33 @@
+.example-card{
+    width:70%;
+    
+    background-color:rgba(239, 255, 255, 0);
+}
+.addtask{
+    margin: 50px 0px 0px 500px;
+}
+.form1{
+    margin-left: 30px;
+    width: 83%;
+    height:100px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.form{
+    margin-left: 30px;
+    width: 40%;
+    height:100px;
+    margin-bottom: 10px;
+    
+}
+.priority{
+    /* margin-left: 30px; */
+    margin-top: 20px;
+}
+button{
+    margin-top: 5em;
+    margin-bottom: 20px;
+    width: 15%;
+    float: right;
+    margin-right: 20px;
+}
